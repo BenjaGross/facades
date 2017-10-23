@@ -1,5 +1,6 @@
 class agent
-attr_accessor :full_namne, 
+  attr_accessor :full_namne, :title, :email_address
 
-has_one :office
+  has_many :listings
+  belongs_to :office
 end

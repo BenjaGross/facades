@@ -1,5 +1,5 @@
 class Employee
-attr_accessor :name
+  attr_accessor :name, :title, :email
 
-has_one :office
+  belongs_to :office
 end

@@ -1,3 +1,0 @@
-class EmployeeFacade
-
-end
