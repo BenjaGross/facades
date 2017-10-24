@@ -1,0 +1,7 @@
+<% @agents.each do |agent| %>
+  <% if agent.nil? %>
+    Active Listings: <%= "No Listings" %>
+  <% else %>
+    Active Listings: <%= agent.active_listings.count %>
+  <% end %>
+<% end %>

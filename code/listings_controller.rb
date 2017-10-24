@@ -1,15 +1,7 @@
-
 class ListingsController < ApplicationController
   def show
-    @listing_facade = ListingFacade.new(listing)
+    @listing  = Listing.find(params[:listing_id])
+    @agents = @listing.agents
   end
 
-
-
-
-
-  private
-  def current_listing
-    Listing.find
-  end
 end
