@@ -1,10 +1,10 @@
 class ListingsController < ApplicationController
   def show
-    @listing = Listing.find(params[:listing_id])
+    @listing = Listing.find(params[:listing_id]) || Listing.new
 
-    @agents = @listing.agents.collect do |agent|
-      agent if !agent.nil?
-    end.collapse
+    @agents = params[:agent_ids].collect do |agent_id|
+      Agent.find(agent_id)
+    end.compact
   end
   #...
 end
