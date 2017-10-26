@@ -10,7 +10,7 @@ presentation 'Null Object Pattern' do
   end
 
   slide "But what exactly does that mean?" do
-    point "Imagine you have some code like this:"
+    point "Imagine you have this code:"
     code(:html) do
       "view_logic_1.html.erb"
     end
@@ -20,22 +20,21 @@ presentation 'Null Object Pattern' do
   grouped_slides do
 
     slide "How Do We Fix This" do
-      point "In my dreams data would just be perfect all the time"
+      point "In my dreams data would be perfect all the time"
       image "Dreams.jpg"
     end
 
     slide "Solutions" do
-      point "View Logic, like we have above"
-      point "Lint the data like so:"
+      point "View Logic, like I showed before"
+      point "Lint the data:’:"
       code(:ruby) do
         "controller_logic_1.rb"
       end
-      point "Same logic from the view but moved into the controller", animation: "roll-in"
     end
 
     slide "Solutions continued" do
-      point "What if we had some way to have reliable objects"
-      point "A way to rely on each object that should be that should be a type to actually act like that type"
+      point "What if we could just rely that all our objects respond to the methods we expect them to?"
+      point "A way that even without perfect data code like this would work"
       code (:ruby) do
         "what_we_want.rb"
       end
