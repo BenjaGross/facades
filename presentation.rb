@@ -59,6 +59,13 @@ presentation 'Null Object Pattern' do
     end
   end
 
+  slide "Finishing Up" do
+    point "Now in our view we can remove our nil check"
+    code(:html) do
+      "view_logic_2.html.erb"
+    end
+  end
+
   slide "Questions" do
     image "questions.jpeg"
   end
